@@ -1,0 +1,53 @@
+
+table.vien {
+    border-collapse: collapse;
+    width: 100%;
+}
+table.vien td, table.vien th {
+    border: 1px solid #141414;
+    padding: 8px;
+    text-align: center;
+}
+
+table.vien th {
+    background-color: #f2f2f2;
+}
+.menu-list li:hover {
+    background-color: #333131; /* Màu nền khi di chuột qua hoặc đã được chọn */
+}
+.menu-list .title {
+    color: #fff;
+}
+tr.dautien{
+    background-color: rgb(17, 122, 61);
+    color: #fffefe;
+}
+h1{
+    margin: 20px 30px; 
+}
+.nutlenh{
+    float: right;
+    width: 150px;
+    height: 40px;
+    background-color: blue;
+    color: aliceblue;
+    border-radius: 5px;
+    margin: 20px 30px;
+}
+.txt-timkiem{
+    float: right;
+    width: 150px;
+    height: 30px;
+    background-color: rgb(236, 236, 240);
+    border-radius: 5px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.sua-button{
+    background-color: rgb(132, 221, 221);
+    border-radius: 5px;
+}
+.xoa-button{
+    background-color: rgb(231, 148, 148);
+    border-radius: 5px;
+}

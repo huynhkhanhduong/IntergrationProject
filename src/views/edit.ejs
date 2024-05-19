@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Edit User Page</title>
+        <link rel="stylesheet" href="/css/styles.css" />
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="/home">Home</a>
+            <a href="/create">Create User</a>
+        </div>
+
+        <div class="form-add-new">
+            <form action="/update" method="POST">
+                <fieldset>
+                    <legend>Edit A User</legend>
+                    <input
+                        style="display: none"
+                        type="text"
+                        name="id"
+                        value="<%= id %>"
+                    />
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input
+                            type="text"
+                            name="name"
+                            value="<%= name %>"
+                            required
+                        />
+                    </div>
+                    <div class="input-group">
+                        <label>Email</label>
+                        <input
+                            type="text"
+                            name="email"
+                            value="<%= email %>"
+                            required
+                        />
+                    </div>
+
+                    <div class="input-group">
+                        <label>Address</label>
+                        <input
+                            type="text"
+                            name="address"
+                            value="<%= address %>"
+                            required
+                        />
+                    </div>
+                    <button>UPDATE</button>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

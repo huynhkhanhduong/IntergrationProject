@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/antd/4.17.0/antd.min.css">
+    <title>Ant Design Layout</title>
+    <link rel="stylesheet" href="/css/stlye1.css">
+    <style>
+        /* Thêm CSS tùy chỉnh nếu cần */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .demo-logo-vertical {
+            width: 120px;
+            height: 32px;
+            background: #333;
+            margin: 16px;
+        }
+        .breadcrumb {
+            margin: 16px 0;
+            padding-left: 16px;
+        }
+        .content {
+            padding: 24px;
+            min-height: 360px;
+            border-radius: 8px;
+            background: #f0f2f5;
+            margin: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div style="min-height: 100vh; display: flex;">
+            <div style="width: 200px; background: #848f8b; color: #fff;">
+                <div class="demo-logo-vertical"></div>
+                <ul class="menu-list" style="list-style-type: none; padding: 0; margin: 0;">
+                    <li style="padding: 16px; cursor: pointer;">
+                            <span class="title" id="Dashboard">Dashboard</span>
+                        </a>
+                    </li>
+                    <li style="padding: 16px; cursor: pointer;">
+                        <!-- <a href="onclick"> -->
+                            <span class="title" id="TotalEarnings" >Total Earning</span>
+                    </li>
+                    <li style="padding: 16px; cursor: pointer;">
+                            <span class="title" id="VacationDays">Vacation Days</span>
+                    </li>
+                    <li style="padding: 16px; cursor: pointer;">
+                            <span class="title" id="AverageBenefits">Average Benefits</span>
+                    </li>
+                    <li style="padding: 16px; cursor: pointer;">
+                        <a href="#">
+                            <span class="title">Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div style="flex: 1;">
+                <header style="font-size: 40px; padding: 0; background: #90979e; height: 64px;">HP System</header>
+                <div class="content">
+                   
+                    <h1>Đây là total earning</h1>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <script src="/js/app.js"></script>
+</body>
+</html>
