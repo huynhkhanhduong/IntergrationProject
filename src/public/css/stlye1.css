@@ -4,8 +4,9 @@
     padding: 10px;
 }
 .combo-box-container select {
-    padding: 10px;
-    font-size: 16px;
+    padding: 14px;
+    font-size: 16px; 
+    height: 55px;
 }
 
 table {
@@ -19,5 +20,22 @@ th, td {
 }
 th {
     background-color: #f2f2f2;
+}
+.combo-box-container .lbt input[type="text"] {
+    width: 80px; 
+    height: 55px;
+    padding: 0 10px; 
+    outline: none;
+    font-size: 16px;
+}
+.lbt input{
+    padding: 3px 0;
+}
+.title{
+    color: #fff;
+    font-weight: bold;
+}
+.lb select{
+    font-size: 16px;
 }
 

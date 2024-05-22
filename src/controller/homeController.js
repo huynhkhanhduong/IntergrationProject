@@ -1,4 +1,6 @@
 const connection = require("../config/database");
+const { Filtering } = require("../services/FilterInDashboard");
+const { GetDeparments } = require("../services/GetDeparments");
 // const {
 //     getAllUsers,
 //     handleCreateUser,
@@ -65,7 +67,13 @@ const connection = require("../config/database");
 
 const RenderDashboardPage = async (req, res) => {
     try {
-        return res.render("Dashboard.ejs");
+        const { department,date,shareholder,gender,type_of_work,ethnicity}=req.body;
+        const data = await GetDeparments();
+        const filter= Filtering(department,date,shareholder,gender,type_of_work,ethnicity);
+        console.log(data)
+        return res.render("Dashboard.ejs", {
+            departments: data
+        });
     } catch (error) {
         console.error("Error updating user:", error);
         res.status(500).send("Internal Server Error");
@@ -95,6 +103,7 @@ const RenderAverageBenefitsPage = async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 };
+
 module.exports = {
     // getHomePage,
     // getPro,

@@ -72,6 +72,7 @@ const getDeleteUser = async (id) => {
     }
 };
 
+
 module.exports = {
     getAllUsers,
     handleCreateUser,

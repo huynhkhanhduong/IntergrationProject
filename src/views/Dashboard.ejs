@@ -61,40 +61,49 @@
             <div style="flex: 1;">
                 <header style="font-size: 40px; padding: 0; background: #90979e; height: 64px;">HP System</header>
                 <div class="content">
+                   <!--Start Loc du lieu -->
                     <div class="col-md-12 well" style="background: #5e4e4e">
                         <div class="col-md-8">
                             <div class="combo-box-container">
-                                <select>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
+                                <select id="Department" name="department">
+                                    <% for(var i=0; i<departments.length; i++) {%>
+                                        <option value="<%= departments[i].DEPARTMENT %>"><%= departments[i].DEPARTMENT %></option>
+                                    <% }; %>
                                 </select>
-                                <select>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
+                                <select name="date">
+                                    <option value="0">Date</option>
+                                    <option value="1">Last Year</option>
                                 </select>
-                                <select>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                </select>
-                                <select>
-                                    <option value="1">Option 1</option>
-                                    <option value="2">Option 2</option>
-                                    <option value="3">Option 3</option>
-                                    <option value="4">Option 4</option>
-                                </select>
+                                    <select name="shareholder">
+                                        <option value="0">NON-SHAREHOLDER</option>
+                                        <option value="1">SHAREHOLDER</option>
+                                    </select>
+                                <div class="lb">
+                                    <span class="title">GENDER</span>
+                                    <select name="gender">
+                                        <option value="0">Male</option>
+                                        <option value="1">Famale</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="lb" >
+                                    <span class="title">TYPE OF WORK</span>
+                                    <select name="type_of_work">
+                                        <option value="0">Full-time</option>
+                                        <option value="1">Part-time</option>
+                                    </select>
+                                </div>
+                                <div class="lbt" name="ethnicity">
+                                    <span class="title">ETHNICITY</span>
+                                    <input type="text">
+                                </div>
                                 <button style="margin: 10px;">submit</button>
                             </div>
 
                         </div>
                          
                     </div>
-                    
+                    <!--end loc du lieu  -->
                     <div class="col-md-12 well" style="margin-top: 60px ;">
                         <hr style="border-top:1px dotted #ccc;" />
                         <div class="col-md-8">
