@@ -67,12 +67,13 @@ const { GetDeparments } = require("../services/GetDeparments");
 
 const RenderDashboardPage = async (req, res) => {
     try {
-        const { department,date,shareholder,gender,type_of_work,ethnicity}=req.body;
+         
         const data = await GetDeparments();
-        const filter= Filtering(department,date,shareholder,gender,type_of_work,ethnicity);
-        console.log(data)
+        const filter = await  Filtering(req);
+        console.log(filter)
         return res.render("Dashboard.ejs", {
-            departments: data
+            departments: data,
+            dataTable:filter
         });
     } catch (error) {
         console.error("Error updating user:", error);

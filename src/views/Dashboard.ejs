@@ -59,7 +59,7 @@
                 </ul>
             </div>
             <div style="flex: 1;">
-                <header style="font-size: 40px; padding: 0; background: #90979e; height: 64px;">HP System</header>
+                <header style="font-size: 40px; padding: 0; background: #90979e; height: 64px;">H System</header>
                 <div class="content">
                    <!--Start Loc du lieu -->
                     <div class="col-md-12 well" style="background: #5e4e4e">
@@ -70,17 +70,17 @@
                                         <option value="<%= departments[i].DEPARTMENT %>"><%= departments[i].DEPARTMENT %></option>
                                     <% }; %>
                                 </select>
-                                <select name="date">
+                                <select id="date" name="date">
                                     <option value="0">Date</option>
                                     <option value="1">Last Year</option>
                                 </select>
-                                    <select name="shareholder">
+                                    <select id="shareholder" name="shareholder">
                                         <option value="0">NON-SHAREHOLDER</option>
                                         <option value="1">SHAREHOLDER</option>
                                     </select>
                                 <div class="lb">
                                     <span class="title">GENDER</span>
-                                    <select name="gender">
+                                    <select id="gender" name="gender">
                                         <option value="0">Male</option>
                                         <option value="1">Famale</option>
                                     </select>
@@ -88,16 +88,16 @@
                                 
                                 <div class="lb" >
                                     <span class="title">TYPE OF WORK</span>
-                                    <select name="type_of_work">
+                                    <select id="type_of_work" name="type_of_work">
                                         <option value="0">Full-time</option>
                                         <option value="1">Part-time</option>
                                     </select>
                                 </div>
                                 <div class="lbt" name="ethnicity">
                                     <span class="title">ETHNICITY</span>
-                                    <input type="text">
+                                    <input id="ethnicity" type="text">
                                 </div>
-                                <button style="margin: 10px;">submit</button>
+                                <button onclick="getData()" id="btn-Submit" style="margin: 10px;">submit</button>
                             </div>
 
                         </div>
@@ -107,11 +107,11 @@
                     <div class="col-md-12 well" style="margin-top: 60px ;">
                         <hr style="border-top:1px dotted #ccc;" />
                         <div class="col-md-8">
-                            <table class="table table-bordered">
+                            <table class="table table-bordered dataTable">
                                 <thead class="alert-info">
                                     <tr>
                                         <th>Name</th>
-                                        <th>Gmail</th>
+                                        <th>Email</th>
                                         <th>Phone Num</th>
                                         <th>Birthday</th>
                                         <th>Gender</th>
@@ -119,8 +119,11 @@
                                         <th>Ethnicity</th>
                                     </tr>
                                 </thead>
-                                <tbody id="result"></tbody>
+                                <tbody id="result">
+                                    
+                                </tbody>
                             </table>
+                            
                         </div>
 
                     </div>
@@ -132,5 +135,6 @@
         </div>
     </div>
     <script src="/js/app.js"></script>
+    <script src="/js/LoadFilterPage.js"></script>
 </body>
 </html>

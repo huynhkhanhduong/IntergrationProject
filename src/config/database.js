@@ -3,7 +3,6 @@ require('dotenv').config();
 const mysql = require('mysql2/promise');
 const sql = require('mssql')
 
-
 // const connection = mysql.createConnection({
 //     host: process.env.DB_HOST,
 //     port: process.env.DB_PORT,
@@ -13,11 +12,10 @@ const sql = require('mssql')
 //   });
 
   const MySQLConnection = mysql.createPool({
-    host: process.env.HOST_MYSQL,
-    port: process.env.PORT_MYSQL,
-    user: process.env.USER_MYSQL,
-    password: process.env.PASSWORD_MYSQL,
-    database: process.env.DATABASE_MYSQL,
+    host: 'localhost',
+    user: 'root',
+    password: '123456',
+    database: 'mydb',
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0,
